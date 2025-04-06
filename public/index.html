@@ -7,15 +7,32 @@
     <script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
-    <div class="container">
-        <ul id="chat" class="list-group">
-        </ul>
+    <div class="modal" id="nameModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Inserisci il tuo nome</h5>
+            <button type="button" data-dismiss="modal">
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="text" id="username" class="form-control" placeholder="Nome utente" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="ButtonSent">Entra</button>
+          </div>
+        </div>
       </div>
-      <div class="row mt-4">
-        <input id="input" class="form-control" />
-        <button id="sendButton" type="button" class="btn btn-success">Send</button>
-      </div>    
-    
-    <script type="application/javascript" src="index.js"></script>
+    </div>
+
+    <div class="container">
+      <ul id="chat" class="list-group"></ul>
+      <ul id="userList" class="list-group mt-4"></ul>
+    </div>
+    <div class="row mt-4">
+      <input id="input" class="form-control" placeholder="Scrivi un messaggio..." />
+      <button id="sendButton" type="button" class="btn btn-success">Invia</button>
+    </div>    
+
+    <script type="module" src="index.js"></script>
   </body>
 </html>
